@@ -1,0 +1,9 @@
+# Raw data is too big for GitHub so link in data/README instead
+data/raw/
+
+# Editor settings
+.vscode/
+
+# OS cluttter
+.DS_Store
+Thumbs.db
