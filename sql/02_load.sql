@@ -17,7 +17,7 @@ TRUNCATE TABLE raw_weather;
 -- Old format journey files
 -- Fields are only quoted when they contain commas -> OPTIONALLY ENCLOSED
 -- =========================================================================
-LOAD DATA LOCAL INFILE 'data/raw/332JourneyDataExtract24Aug2022-30Aug2022.csv' INTO TABLE raw_journeys_old CHARACTER SET utf8mb4 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
+LOAD DATA LOCAL INFILE 'data/raw/332JourneyDataExtract24Aug2022-30Aug2022.csv' INTO TABLE raw_journeys_old CHARACTER SET utf8mb4 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES (
     rental_id,
     duration,
     bike_id,
@@ -29,7 +29,7 @@ LOAD DATA LOCAL INFILE 'data/raw/332JourneyDataExtract24Aug2022-30Aug2022.csv' I
     start_station_name
 )
 SET source_file = '332JourneyDataExtract24Aug2022-30Aug2022.csv';
-LOAD DATA LOCAL INFILE 'data/raw/333JourneyDataExtract31Aug2022-06Sep2022.csv' INTO TABLE raw_journeys_old CHARACTER SET utf8mb4 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
+LOAD DATA LOCAL INFILE 'data/raw/333JourneyDataExtract31Aug2022-06Sep2022.csv' INTO TABLE raw_journeys_old CHARACTER SET utf8mb4 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES (
     rental_id,
     duration,
     bike_id,
@@ -41,7 +41,7 @@ LOAD DATA LOCAL INFILE 'data/raw/333JourneyDataExtract31Aug2022-06Sep2022.csv' I
     start_station_name
 )
 SET source_file = '333JourneyDataExtract31Aug2022-06Sep2022.csv';
-LOAD DATA LOCAL INFILE 'data/raw/334JourneyDataExtract07Sep2022-11Sep2022.csv' INTO TABLE raw_journeys_old CHARACTER SET utf8mb4 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
+LOAD DATA LOCAL INFILE 'data/raw/334JourneyDataExtract07Sep2022-11Sep2022.csv' INTO TABLE raw_journeys_old CHARACTER SET utf8mb4 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES (
     rental_id,
     duration,
     bike_id,
@@ -56,7 +56,7 @@ SET source_file = '334JourneyDataExtract07Sep2022-11Sep2022.csv';
 -- =========================================================================
 -- New format journey files
 -- =========================================================================
-LOAD DATA LOCAL INFILE 'data/raw/335JourneyDataExtract12Sep2022-18Sep2022.csv' INTO TABLE raw_journeys_new CHARACTER SET utf8mb4 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
+LOAD DATA LOCAL INFILE 'data/raw/335JourneyDataExtract12Sep2022-18Sep2022.csv' INTO TABLE raw_journeys_new CHARACTER SET utf8mb4 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES (
     journey_number,
     start_date,
     start_station_number,
@@ -70,7 +70,7 @@ LOAD DATA LOCAL INFILE 'data/raw/335JourneyDataExtract12Sep2022-18Sep2022.csv' I
     total_duration_ms
 )
 SET source_file = '335JourneyDataExtract12Sep2022-18Sep2022.csv';
-LOAD DATA LOCAL INFILE 'data/raw/336JourneyDataExtract19Sep2022-25Sep2022.csv' INTO TABLE raw_journeys_new CHARACTER SET utf8mb4 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
+LOAD DATA LOCAL INFILE 'data/raw/336JourneyDataExtract19Sep2022-25Sep2022.csv' INTO TABLE raw_journeys_new CHARACTER SET utf8mb4 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES (
     journey_number,
     start_date,
     start_station_number,
@@ -84,7 +84,7 @@ LOAD DATA LOCAL INFILE 'data/raw/336JourneyDataExtract19Sep2022-25Sep2022.csv' I
     total_duration_ms
 )
 SET source_file = '336JourneyDataExtract19Sep2022-25Sep2022.csv';
-LOAD DATA LOCAL INFILE 'data/raw/337JourneyDataExtract26Sep2022-02Oct2022.csv' INTO TABLE raw_journeys_new CHARACTER SET utf8mb4 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
+LOAD DATA LOCAL INFILE 'data/raw/337JourneyDataExtract26Sep2022-02Oct2022.csv' INTO TABLE raw_journeys_new CHARACTER SET utf8mb4 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES (
     journey_number,
     start_date,
     start_station_number,
