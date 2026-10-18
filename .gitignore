@@ -7,3 +7,5 @@ data/raw/
 # OS cluttter
 .DS_Store
 Thumbs.db
+
+*.session.sql
